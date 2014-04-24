@@ -1,0 +1,177 @@
+body
+{
+	margin-top: 0px;
+	margin-left: 50px;
+	margin-right: 50px;
+	background-color: #ffffff;
+	/* background: url("http://www.math.wisc.edu/~jeanluc/Icons/CH_background.jpg"); */
+	font-size: 10pt;
+	font-family: San-serif, Verdana, Arial, Helvetica, sans-serif;
+	color: #333333;
+}
+
+table
+{
+	font-size: 10pt;
+	font-family: San-serif, Verdana, Arial, Helvetica, sans-serif;
+	color: #333333;
+}
+
+h1
+{
+	text-transform: uppercase;
+	letter-spacing: 0.3em;
+	font-size: 12pt;
+	border-style: solid;
+	border-color: #444444;
+	border-width: 0px 0px 1px 0px;
+}
+
+h2
+{
+	margin: 0.5em 0 0 0;
+	padding: 2px 2px 2px 2px; 
+	border-style: dashed;
+	border-color: #444444;
+	border-width: 0px 0px 1px 0px;
+	font-weight: bold;
+	line-height: 1.4em;
+	background-color: #ffffff;
+	text-transform: uppercase;
+	letter-spacing: 0.3em;
+	font-size: 10pt;
+}
+
+h3
+{
+	text-transform: uppercase;
+	font-size: 8pt;
+}
+
+a:link 	
+{
+	color: #5555bb; 
+	text-decoration: none;
+}
+
+a:visited 
+{
+	color: #5555aa; 
+	text-decoration: none;
+}
+
+a:hover
+{
+	color: #aa8822; 
+	text-decoration: underline;
+}
+
+a:active 
+{
+	color: #5555aa;
+	text-decoration: none;
+}
+
+ul
+{
+	list-style-image: url("Icons/bullet.gif");
+}
+
+li
+{
+	margin-bottom: 4pt;
+}
+
+ul.nobullet
+{
+	list-style-type: none;
+	list-style-image: none;
+}
+
+img
+{
+	border-style: none;
+}
+
+hr
+{
+	border-style: dotted;
+	border-color: #333333;
+	border-width: 0px 0px 1px 0px;
+}
+
+div.header 
+{
+	overflow: hidden;
+	background-color: #dddddd;
+	background: url("http://www.math.wisc.edu/~jeanluc/Icons/CH_background.jpg");
+	border-color: #333333;
+	border-width: 0px 0px 1px 0px; 
+	border-style: solid;
+}
+
+div.left
+{
+	float: left;
+	width: 460px;
+	padding-top: 10px;
+	background-color: #ffffff;
+}
+
+div.center
+{
+	padding-top: 10px;
+	background-color: #ffffff;
+}
+
+div.right 
+{
+	margin-left: 500px;
+	padding-top: 10px;
+	background-color: #ffffff;
+}
+
+div.left2
+{
+	float: left;
+	width: 250px;
+	padding-top: 10px;
+	background-color: #ffffff;
+}
+
+div.right2
+{
+	margin-left: 260px;
+	padding-top: 10px;
+	background-color: #ffffff;
+}
+
+div.footer 
+{
+	clear: both;
+	background-color: #dddddd;
+	background: url("http://www.math.wisc.edu/~jeanluc/Icons/CH_background.jpg");
+	border-color: #333333;
+	border-width: 1px 0px 0px 0px; 
+	border-style: solid;
+}
+
+div.menu
+{
+	margin: 0.5em 0 0 0;
+	padding: 2px 2px 2px 2px; 
+	border-color: #444444;
+	border-width: 0px 0px 0px 0px;
+	font-weight: bold;
+	line-height: 1.4em;
+	background-color: #ffffff;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	font-size: 10pt;
+}
+
+div.menu a
+{
+	margin: 0 5% 0 5%;
+}
+
