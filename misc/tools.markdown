@@ -1,14 +1,29 @@
-Necessary to work:
-music
-caffeine
-pen
-paper
-papers and books
-- scholar.google.com
-- arxiv.org
-place to work
-learning resources (the interweb)
+---
+layout: default
+title: Helpful Tools
+---
 
+
+Latex
+=====
+   -   gummi
+   -   beamer
+   -   lyx
+
+Plotting
+========
+   -   matplotlib
+   -   inkscape
+   -   plotdigitizer
+
+Papers
+======
+   -   mendeley
+   -   arxiv
+   -   google scholar
+
+Organization
+============
 importance of organization - information and ideas:
 -will need to know the background ideas
 --requires reading plenty of papers and books
@@ -20,11 +35,6 @@ importance of organization - information and ideas:
 ----latex documents on many different sub categories
 notes on various topics can be used for talks, papers, thesis, etc.
 
--need to keep original work organized
-
-software:
-mendeley
-lyx
-papers
-endnote
-?
+Other
+=====
+   -   image conversion
