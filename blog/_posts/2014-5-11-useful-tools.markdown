@@ -2,6 +2,7 @@
 layout: post
 title: Useful Tools in Science
 tags: research plots science grad-school
+summary: A collection of some software I have found useful for research.
 ---
 
 After spending five years as a physics PhD student, I have gone through many iterations in the way that I conduct my science. Nobody sat me down in the beginning and made a list of all the useful tools that would help me be a better researcher, and even if they had I doubt that I would really have appreciated what they were trying to do. To a large extent, research is all about encountering problems and teaching yourself the skills necessary to overcome them, and there is no substitute for doing this problem solving yourself. All the same, it seems a shame if I don't attempt to communicate to others the methods I have found. Though they may not be the absolute best practices, they generally work quite well for me. I'd like to share them in the hopes that it saves other starting grad students a lot of time and heartache.
