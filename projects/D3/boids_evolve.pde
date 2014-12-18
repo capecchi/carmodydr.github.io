@@ -1,22 +1,28 @@
 // Based on the processing flocking example: http://processing.org/examples/flocking.html
 
 Flock flock;
+int flockSize = 50;
 
 float accelNoise[];
 
-int value = 12;
+int[] colorArray = new int[50];
 
-int val() {
-	return value;
+int[] val() {
+   return colorArray; 
 }
 
 void setup() {
-  size(640, 360);
+  size(360, 360);
   flock = new Flock();
   // Add an initial set of boids into the system
-  for (int i = 0; i < 50; i++) {
+  for (int i = 0; i < flockSize; i++) {
     flock.addBoid(new Boid(random(width),random(height)) );
   }
+  
+  for (int i = 0; i < flockSize; i++) {
+    colorArray[i] = 0;
+  }
+
   
   accelNoise = new float[(width+2)*(height+2)];
   
@@ -269,6 +275,10 @@ class Flock {
         b.run(boids);  // Passing the entire list of boids to each boid individually
       }
     if (count == 1000) {
+      for (int i = 0; i < flockSize; i++) {
+        colorArray[i] = 0;
+      }
+      int colori = 0;
       int parent1 = 0;
       int parent2 = parent1 + 1;
       Boid bp1 = boids.get(parent1);
@@ -314,12 +324,15 @@ class Flock {
         else if (brightness_rand > 94) b.brightness = random(0,255);
         else b.brightness = bp2.brightness;
         
+        colorArray[colori] = int(b.brightness);
+        
         parent1 = parent1 + 2;
         if (parent1 >= boids.size()) parent1 = 0;
         bp1 = boids.get(parent1);
         parent2 = parent2 + 2;
         if (parent2 >= boids.size()) parent2 = 1;
         bp2 = boids.get(parent2);
+        colori += 1;
       }
       count = 0;
     }
@@ -337,7 +350,6 @@ class Flock {
         b.r = 0;
         b.location.x = 1000;
         b.location.y = 1000;
-	value = value - 1;
       }
     }
     // for (int i = boids.size()-1; i>=0; i--) Boid b = boids.get(i);

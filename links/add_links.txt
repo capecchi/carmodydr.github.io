@@ -1,0 +1,64 @@
+Links to add:
+
+Data/Scientific Visualization:
+- D3.js
+- Processing / Processing.js
+- matplotlib
+- jquery, javascript tutorials
+- nature of code
+
+Physics libraries
+- python, processing
+
+Design
+- color? shape?
+- edward tufte
+
+storytelling and presentations
+- TED
+- The Moth
+
+Photos
+-flickr, instagram
+
+Mapping
+- CartoDB
+- Mapbox
+- Leaflet
+
+Open Society
+- Open Knowledge
+- Open Science
+- Open Culture
+- PLOS
+- Open Government Handbook
+- Media and Data Analysis
+
+Digital Magazines
+- Aeon
+- Quanta
+- Orion
+- Bunyan Velo
+- Nautilus
+
+News
+- democracy now
+- drudge report
+
+People who are doing things that I think are interesting:
+- Vi Hart
+- Kevin Kelly - Wired co-founder, cycle across UW, technologist and conservationist
+- Nicky Case - designer
+- Kevin Russ - photographer
+- Daniel Schiffman - Nature of Code
+- various artists and musicians
+- Cass Gilbert - writer, photographer, cyclotourist
+- Geoffrey West - SFI researcher on cities
+- Aaron Teasdale - writer and photographer, outdoors
+- Luis Bettencourt - SFI researcher on scaling in cities, urbanization and sustainability
+- David Krakuer - director of WID, complexity in biological systems
+- John Francis  - planetwalker
+- ??? - artifical life at UNM
+- David Kroodsma - data journalist, cyclotourist, energy
+- Maria Popova
+- Sean Carroll - physicist and writer

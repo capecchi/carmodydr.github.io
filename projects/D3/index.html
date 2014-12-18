@@ -112,30 +112,35 @@ body {
 <div class="chart"> </div>
 
 <script>
-function testFunc() {
-while(1) {
 var test = 30;
+function testFunc() {
 
 	var pjs;
 	pjs = Processing.getInstanceById('boidsevolve');
-	test = pjs.val();
+	var colorArray = pjs.val();
 
+	var colorHist = d3.layout.histogram()
+		.bins(x.ticks(20))
+		(colorArray);
 
-var sample = [4,10,5,10,test];
+	d3.select(".chart")
+		.selectAll("div").remove();
 
-var x = d3.scale.linear()
-    .domain([0, d3.max(sample)])
-    .range([0, 420]);
+	var sample = [4,10,5,10,colorHist];
 
- d3.select(".chart")
-  .selectAll("div")
-    .data(sample)
-  .enter().append("div")
-    .style("width", function(d) { return x(d) + "px"; })
-    .text(function(d) { return d; });
+	var x = d3.scale.linear()
+   	 .domain([0, d3.max(sample)])
+   	 .range([0, 420]);
+
+	d3.select(".chart")
+	 .selectAll("div")
+	 .data(sample)
+  	 .enter().append("div")
+    	 .style("width", function(d) { return x(d) + "px"; })
+   	 .text(function(d) { return d; });
+
 }
-}
-setTimeout(function () {testFunc()}, 3000); 
+setInterval(function () {testFunc();}, 500); 
 </script>
 
 
