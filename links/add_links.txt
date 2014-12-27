@@ -62,3 +62,75 @@ People who are doing things that I think are interesting:
 - David Kroodsma - data journalist, cyclotourist, energy
 - Maria Popova
 - Sean Carroll - physicist and writer
+---
+layout: default
+title: Some interesting links
+---
+
+Links
+=====
+
+A number of useful or interesting links, which have yet to get sorted
+out.
+
+Scientific Tools
+----------------
+
+-   [PNG/JPG to EPS/PDF Conversion](http://www.tlhiv.org/rast2vec/)
+-   [Gnuplot Tutorial](http://www.duke.edu/~hpgavin/gnuplot.html)
+-   [Correlation
+    Length](http://staff.science.nus.edu.sg/~parwani/c1/node52.html)
+-   [Beamer](http://www.math.umbc.edu/~rouben/beamer/)
+-   [NIST Digital Library of Mathematical
+    Functions](http://dlmf.nist.gov)
+-   [Mathematic Notebooks for Nonlinear
+    Dynamics](http://www.ekayasolutions.com/UCDMath/NLDApplications.php)
+
+Miscellaneous
+-------------
+
+-   [The FIRE Place](http://fire.pppl.gov)
+-   [Bicycle Touring
+    Guide](http://www.bicycletouring101.com/TableOfContents.htm)
+
+![image](images/Waterfall.jpg)
+---
+layout: default
+title: Helpful Tools
+---
+
+
+Latex
+=====
+   -   gummi
+   -   beamer
+   -   lyx
+
+Plotting
+========
+   -   matplotlib
+   -   inkscape
+   -   plotdigitizer
+
+Papers
+======
+   -   mendeley
+   -   arxiv
+   -   google scholar
+
+Organization
+============
+importance of organization - information and ideas:
+-will need to know the background ideas
+--requires reading plenty of papers and books
+--good to keep an evolving set of notes
+---read an article
+---notate it
+---scribble preliminary notes on some scrap paper
+---write it all up into something cohesive and comprehensive
+----latex documents on many different sub categories
+notes on various topics can be used for talks, papers, thesis, etc.
+
+Other
+=====
+   -   image conversion
