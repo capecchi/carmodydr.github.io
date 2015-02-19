@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Lake Mendota Ice Cover</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+	<!-- Google tracking ID -->
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-50791294-1', 'danielcarmody.net');
+  ga('send', 'pageview');
+
+</script>
+
+    </head>
+    <body>
+
+	<div class="container">
+        <div class="site">
+          <div class="header">
+            <h1 class="title"><a href="/">Dan Carmody</a></h1>
+            <a class="extra" href="/">home</a>
+	    <a class="extra" href="/blog">blog</a>
+	    <a class="extra" href="/research">research</a>
+	    <a class="extra" href="/projects">projects</a>
+	    <a class="extra" href="/photos">photos</a>
+	    <a class="extra" href="/links">links</a>
+          </div>
+
+          <h2>Lake Mendota Ice Cover</h2>
+<p class="meta">13 Jan 2015</p>
+
+<!-- <ul class="tag_list"> -->
+
+<ul class="tag_list">
+ 
+ <li class="archive_list"><a class="tag_list_link" href="/blog/tag/visualization">visualization</a></li>
+ 
+ <li class="archive_list"><a class="tag_list_link" href="/blog/tag/python">python</a></li>
+ 
+</ul>
+
+<div class="post">
+<p>Every year the Wisconsin State Climatology Office keeps track of the closing and opening dates of Lake Mendota in Madison, WI. These are the dates in the winter when the ice either completely covers the lake (in the case of closing) or finally opens up again to water (in the case of opening). These records go back all the way to 1852 and are given in a simple table format <a href="http://www.aos.wisc.edu/~sco/lakes/Mendota-ice.html">here</a>. Similar tables exist for <a href="http://www.uwex.edu/sco/icemon.html">Lake Monona</a> and <a href="http://www.uwex.edu/sco/icewing.html">Lake Wingra</a>. Looking at this data, I wonder what kind of trends we might find.</p>
+
+<p>Some of the basic stats are given on a <a href="http://www.uwex.edu/sco/icesum.html">summary page</a>. For instance, we can find out that the earliest closing date on record was November 23rd (in 1880) and the latest was January 20th (in 1932). The latest opening date was May 6th (in 1857) and the earliest was February 27th (in 1998). The average number of days that Mendota is frozen is 106, with the shortest being 47 days (1997-1998) and the longest being 161 (1880-1881). The summary table lists the shortest duration at 47 days (1997-1998), but this record was actually beat in the 2001-2002 season, when the duration was only 21 days.</p>
+
+<p>That’s all interesting, but what does it look like in graphical form? The Climatology Office provides a plot of the duration of Mendota’s <a href="http://www.aos.wisc.edu/~sco/lakes/mendota-dur.gif">closure over time</a>, which shows a decreasing trend. I want to take a different look, and instead look at the actual range of time that the lake was frozen. </p>
+
+<p>First we download the data and clean it up a bit. Once this is done, I’ve got to do some conversions with the dates to make it easier to use. I’m given the day and month of both the close and open dates, but I’d like to have these in numerical form. To do this, I can use the ‘to_datetime’ function in pandas to convert the open/close strings to the datetime format of pandas, then use the ‘dayofyear’ attribute to find the numerical day of the year.</p>
+
+<pre><code>df = pd.read_csv('Mendota_Ice.csv')
+df_dates = df['Open'].to_datetime
+list = []
+for i in df_dates:
+	list = list + [i.dayofyear] 
+df['OpenDay'] = list
+</code></pre>
+
+<p>Note that with this implementation the Open and Close dates are converted to a date within the current year. That means that when I change to ‘dayofyear’, for any years that are leap years, these numbers will be off by one. But I’m really not too concerned with that.</p>
+
+<p>Now I want to shift these numbers so that the middle of winter will occur in the middle of the vertical axis. After doing so, and adding a few more niceties, I get the following plot.</p>
+
+<p><img src="/blog/images/mendota-ice-cover.png" alt="figure" /></p>
+
+
+</div>
+
+
+
+          <div class="footer">
+            <div class="contact">
+              <p>
+                Dan Carmody<br />
+  <!--              physicist, runner, cyclist<br />
+   -->           </p>
+            </div>
+            <div class="contact">
+              <p>
+                <a href="https://twitter.com/carmodydr">twitter.com/carmodydr</a><br />
+              </p>
+            </div>
+          </div>
+        </div>
+	</div><!-- container --> 
+
+    </body>
+</html>
