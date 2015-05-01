@@ -1,26 +1,11 @@
 Resources
 =========
 
-Storytelling
-------------
- -  TED
- -  The Moth
-
 Mapping
 -------
  -  CartoDB
  -  Mapbox
  -  Leaflet
-
-
-Open Society
-------------
- -  Open Knowledge
- -  Open Science
- -  Open Culture
- -  PLOS
- -  Open Government Handbook
- -  Media and Data Analysis
 
 People 
 ------
@@ -36,13 +21,6 @@ People
  - David Kroodsma - data journalist, cyclotourist, energy
  - Maria Popova
  - Sean Carroll - physicist and writer
-
-Miscellaneous
--------------
-
--   [The FIRE Place](http://fire.pppl.gov)
--   [Bicycle Touring
-    Guide](http://www.bicycletouring101.com/TableOfContents.htm)
 
 
 Plotting
