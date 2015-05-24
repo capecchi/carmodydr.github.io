@@ -39,6 +39,9 @@ Other
    -   image conversion
 
 www.asterank.com
+http://www.aip.org/history/cosmology/ideas/island.htm (and parent pages)
+http://www.aip.org/history/exhibits.html
+
 
 
 Data/Scientific Visualization

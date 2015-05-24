@@ -44,6 +44,27 @@
 <a href="http://www.flickr.com/photos/carmodydr/sets/72157640553163783/"><img src="http://farm6.staticflickr.com/5533/12384544384_64a052da88.jpg"></a>
 </center>
 
+
+<div id="instafeed"></div>
+
+<script type="text/javascript" src="/src/instafeed.min.js"></script>
+
+
+
+
+
+<script type="text/javascript">
+        var feed = new Instafeed({
+                get: 'user',
+                userId: 15338817,
+                clientId: 'dc596a1850334680a63eabfa159ee4a9',
+                accessToken: '15338817.467ede5.afb4815ed3e4438ca1048d86fed46d54',
+                limit: 4 ,
+                template: '<a href="{{link}}"> <img src="{{image}}" alt="{{caption}}" /></a>'
+        });
+        feed.run();
+</script>
+
 </div>
 
 
