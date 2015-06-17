@@ -300,6 +300,7 @@ class Flock {
          if (parent1 >= boids.size()) parent1 = 0;
          bp1 = boids.get(parent1);
         }
+	bp2 = boids.get(parent1+1);
         while (bp2.maxspeed == 0) {
          // it's dead - reassign the parent
          parent2 = parent2 + 2;
