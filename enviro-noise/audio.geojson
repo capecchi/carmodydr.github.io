@@ -401,5 +401,133 @@
         ]
       }
     }
+{
+      "type": "Feature",
+      "properties": {
+        "name": "Smith River",
+        "date": "7.12.2015",
+        "description": "",
+        "url": "files/SmithRiver.m4a"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -124.01470184326172,
+          41.77956887104993
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cleetwood Cove, Crater Lake",
+        "date": "7.13.2015",
+        "description": "",
+        "url": "files/CleetwoodCoveCraterLake.m4a"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.0886182785034,
+          42.976191015207476
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Rogue River - Siskiyou National Forest",
+        "date": "7.13.2015",
+        "description": "",
+        "url": "files/RogueRiverSiskiyouNF.m4a"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.25182533264159,
+          42.88954882665412
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "South Sister Summit",
+        "date": "7.15.2015",
+        "description": "",
+        "url": "files/SouthSisterSummit.m4a"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.76947832107545,
+          44.1037043626529
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Crow's Feet",
+        "date": "7.15.2015",
+        "description": "",
+        "url": "files/CrowsFeet.m4a"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.31391048431395,
+          44.06012890050531
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Frog Lake",
+        "date": "7.16.2015",
+        "description": "",
+        "url": "files/FrogLake.m4a"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.69510602951048,
+          45.216344172085776
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Iron Creek Campground",
+        "date": "7.19.2015",
+        "description": "",
+        "url": "files/IronCreekCG.m4a"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.98506355285645,
+          46.42768224175069
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Glacier Vista",
+        "date": "7.20.2015",
+        "description": "",
+        "url": "files/GlacierVista.m4a"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.73546791076659,
+          46.801557680581034
+        ]
+      }
+    }
   ]
 }
