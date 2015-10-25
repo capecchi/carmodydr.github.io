@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>US Library Data</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+	<!-- Google tracking ID -->
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-50791294-1', 'danielcarmody.net');
+  ga('send', 'pageview');
+
+</script>
+
+    </head>
+    <body>
+	<div class="container">
+        <div class="site">
+          <div class="header">
+            <h1 class="title"><a href="/">Dan Carmody</a></h1>
+            <a class="extra" href="/">home</a>
+	    <a class="extra" href="/about">about</a>
+	    <a class="extra" href="/blog">blog</a>
+	    <a class="extra" href="/projects">projects</a>
+	    <a class="extra" href="/photos">photos</a>
+	    <a class="extra" href="/links">links</a>
+          </div>
+
+          <h2>US Library Data</h2>
+<p class="meta">25 Oct 2015</p>
+
+<!-- <ul class="tag_list"> -->
+
+<ul class="tag_list">
+ 
+ <li class="archive_list"><a class="tag_list_link" href="/blog/tag/libraries">libraries</a></li>
+ 
+ <li class="archive_list"><a class="tag_list_link" href="/blog/tag/data">data</a></li>
+ 
+ <li class="archive_list"><a class="tag_list_link" href="/blog/tag/cartodb">cartodb</a></li>
+ 
+</ul>
+
+<div class="post">
+<p>A while ago I was trying to teach myself some of the basics of data science and online visualization, and since I love reading and frequent libraries on a relatively regular basis, I thought that I would see what kind of data was out there on the public libraries of the US.</p>
+
+<p>The first step, of course, is to find the data. A quick Google search for ‘US public libraries’ brings me to a few different sites: </p>
+
+<ul>
+  <li><a href="www.publiclibraries.com">www.publiclibraries.com</a> - list of libraries by state, with name, address, and phone number</li>
+  <li><a href="http://www.imls.gov">Institute of Museum and Library Services</a> - surveys and data files stretching back to 1992 </li>
+  <li><a href="http://www.imls.gov/research/data_analysis_tools.aspx">IMLS Data Analysis Tools</a> - some data analysis tools - look up specific locations</li>
+  <li><a href="http://www.imaplibraries.org/">iMapLibraries</a> - map of library locations, a couple of derived maps</li>
+</ul>
+
+<p>The IMLS data looks pretty solid. I download the data from 2012 and take a look. Luckily, this data set includes a geospatial file (geojson), which makes the creation of online maps a lot easier. Unfortunately this is only available for the 2012 data - previous years would require a lot more work.</p>
+
+<p>This data set has extensive documentation, which makes it easier to understand the 100+ columns available. Some key ones are total library income, total library expenditures, total visits, and the population of the local service area (important for calculating per capita quantities). From there, it’s important to organize it into a workable format and understand what kind of data we’ve got.The python library “pandas” is the go-to workhorse for dealing with datasets like these. </p>
+
+<p>CartoDB is a great tool for creating quick maps of geolocated quantities, which might help to identify some trends. At the very least it’s nice to see everything laid out. For instance, here is a map of public libraries that is color-coded based on the annual number of library visits.</p>
+
+<p><img src="/blog/images/us-libraries-visits-choropleth.png" alt="image" /></p>
+
+<p>This library dataset, though quite extensive, doesn’t really give us a whole lot in terms of the effectiveness of various libraries. For that we have to seek out additional data. Literacy data seems like the stuff to get, and for that we turn to the National Center for Education Statistics, which has some estimates of adult literacy. There is both state data and county data. For just a quick and dirty look, let’s try comparing state averages of various quantities to the state literacy data. County data would be more localized and probably more useful, but it would also take a good bit more time. Perhaps in the future.</p>
+
+<p>There are tons of quantities we could look at. For now, I’m just going to look at a few: the total library income per capita, the number of print materials per capita, and the number of librarians per 10000 people.</p>
+
+<p><img src="/blog/images/us-libraries-lackVincmFIT.png" alt="image" /></p>
+
+<p>There doesn’t seem much of a correlation with the per capita library income, but the next two figures show a correlation with the amount of print material and the number of librarians.</p>
+
+<p><img src="/blog/images/us-libraries-lackVbkvolFIT.png" alt="image" /></p>
+
+<p><img src="/blog/images/us-libraries-lackVlibrariaFIT.png" alt="image" /></p>
+
+<p>Have we learned anything from all this? That’s hard to say. Obviously there are issues to consider in correlation/causation. Maybe a more literate population just expects more from their libraries, and so those libraries will have more books and a larger staff. This is a pretty quick look, and a lot more work would need to be done to draw solid conclusions. The fact that the above plots were made with averaged state data washes out information quite a bit. Performing this same sort of analysis county by county would be much more revealing.</p>
+
+
+</div>
+
+
+
+          <div class="footer">
+            <div class="contact">
+              <p>
+                Dan Carmody<br />
+  <!--              physicist, runner, cyclist<br />
+   -->           </p>
+            </div>
+            <div class="contact">
+              <p>
+                <a href="https://twitter.com/carmodydr">twitter.com/carmodydr</a><br />
+              </p>
+            </div>
+          </div>
+        </div>
+	</div><!-- container --> 
+    </body>
+</html>
