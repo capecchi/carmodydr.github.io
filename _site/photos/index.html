@@ -26,20 +26,52 @@
 
     </head>
     <body>
-
 	<div class="container">
         <div class="site">
           <div class="header">
             <h1 class="title"><a href="/">Dan Carmody</a></h1>
             <a class="extra" href="/">home</a>
+	    <a class="extra" href="/about">about</a>
 	    <a class="extra" href="/blog">blog</a>
-	    <a class="extra" href="/research">research</a>
 	    <a class="extra" href="/projects">projects</a>
 	    <a class="extra" href="/photos">photos</a>
 	    <a class="extra" href="/links">links</a>
           </div>
 
           <h1 id="photos">Photos</h1>
+
+<h2 id="instagram">Instagram</h2>
+
+<div id="instafeed"></div>
+
+<script type="text/javascript" src="/src/instafeed.min.js"></script>
+
+<script type="text/javascript">
+	// 
+	// 
+	var feed = new Instafeed({
+		get: 'user',
+		userId: 15338817,
+		clientId: 'dc596a1850334680a63eabfa159ee4a9',
+		accessToken: '15338817.467ede5.afb4815ed3e4438ca1048d86fed46d54',
+		limit: 4 ,
+		template: '<a href="{{link}}"> <img src="{{image}}" alt="{{caption}}" /></a>'
+	});
+	feed.run();
+</script>
+
+<h2 id="flickr">Flickr</h2>
+
+<!--
+<table style="width:100%" >
+<tr>
+<td><a href="/colombia"><img src="/projects/images/colombia_map.png" width="200" /></a></td><td><center>  <b>Colombia</b>: a simple photo map of a trip I took to Colombia in 2013 </center></td>
+</tr>
+<tr>
+<td><a href="/newzealand"><img src="/projects/images/NZ_map.png" width="200" /></a></td><td><center>  <b>New Zealand</b>: a week and a half long cycle tour around the South Island of New Zealand in 2014</center></td>
+</tr>
+</table>
+-->
 
 <p>Until I decide to make a couple of albums to display here, my photos can be found on <a href="http://www.flickr.com/carmodydr">Flickr</a>.</p>
 
@@ -69,6 +101,5 @@
           </div>
         </div>
 	</div><!-- container --> 
-
     </body>
 </html>

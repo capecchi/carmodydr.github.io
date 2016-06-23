@@ -1,13 +1,36 @@
 // Based on the processing flocking example: http://processing.org/examples/flocking.html
 
 Flock flock;
+int flockSize = 50;
+
+float accelNoise[];
+
+int[] colorArray = new int[50];
+
+int[] val() {
+   return colorArray; 
+}
 
 void setup() {
-  size(640, 360);
+  size(360, 360);
   flock = new Flock();
   // Add an initial set of boids into the system
-  for (int i = 0; i < 50; i++) {
-    flock.addBoid(new Boid(width/2,height/2));
+  for (int i = 0; i < flockSize; i++) {
+    flock.addBoid(new Boid(random(width),random(height)) );
+  }
+  
+  for (int i = 0; i < flockSize; i++) {
+    colorArray[i] = 0;
+  }
+
+  
+  accelNoise = new float[(width+2)*(height+2)];
+  
+  // give some random acceleration field
+  for (int x = 0; x < width+2; x++) {
+    for (int y = 0; y < height+2; y++) {
+      accelNoise[x+y*width] = 0.03*noise(x*0.01,y*0.01);
+    }
   }
 }
 
@@ -21,8 +44,6 @@ void mousePressed() {
 //  flock.addBoid(new Boid(mouseX,mouseY));
   flock.removeBoid(mouseX,mouseY);
 }
-
-
 
 // The Boid class
 
@@ -68,17 +89,21 @@ class Boid {
 
   // We accumulate a new acceleration each time based on three rules
   void flock(ArrayList<Boid> boids) {
-    PVector sep = separate(boids);   // Separation
-    PVector ali = align(boids);      // Alignment
-    PVector coh = cohesion(boids);   // Cohesion
+    //PVector sep = separate(boids);   // Separation
+    //PVector ali = align(boids);      // Alignment
+    //PVector coh = cohesion(boids);   // Cohesion
     // Arbitrarily weight these forces
-    sep.mult(1.5);
-    ali.mult(1.0);
-    coh.mult(1.0);
+    //sep.mult(1.5);
+    //ali.mult(1.0);
+    //coh.mult(1.0);
     // Add the force vectors to acceleration
-    applyForce(sep);
-    applyForce(ali);
-    applyForce(coh);
+ //   applyForce(sep);
+  //  applyForce(ali);
+ //   applyForce(coh);
+    float accelNX = sqrt(0.03)*(0.5-noise(location.x*0.01));
+    float accelNY = sqrt(0.03)*(0.5-noise(1000+location.y*0.01));
+    PVector accelN = new PVector(accelNX,accelNY);
+    applyForce(accelN);
   }
 
   // Method to update location
@@ -88,7 +113,7 @@ class Boid {
     // Limit speed
     velocity.limit(maxspeed);
     location.add(velocity);
-    // Reset accelertion to 0 each cycle
+    // Reset acceleration to 0 each cycle
     acceleration.mult(0);
   }
 
@@ -250,6 +275,10 @@ class Flock {
         b.run(boids);  // Passing the entire list of boids to each boid individually
       }
     if (count == 1000) {
+      for (int i = 0; i < flockSize; i++) {
+        colorArray[i] = 0;
+      }
+      int colori = 0;
       int parent1 = 0;
       int parent2 = parent1 + 1;
       Boid bp1 = boids.get(parent1);
@@ -271,14 +300,15 @@ class Flock {
          if (parent1 >= boids.size()) parent1 = 0;
          bp1 = boids.get(parent1);
         }
+	bp2 = boids.get(parent1+1);
         while (bp2.maxspeed == 0) {
          // it's dead - reassign the parent
          parent2 = parent2 + 2;
          if (parent2 >= boids.size()) parent2 = 1;
          bp2 = boids.get(parent2);
         }
-        b.location.x = width/2;
-        b.location.y = height/2;
+        b.location.x = random(width);
+        b.location.y = random(height);
         float angle = random(TWO_PI);
         b.velocity = new PVector(cos(angle), sin(angle));
         
@@ -295,12 +325,15 @@ class Flock {
         else if (brightness_rand > 94) b.brightness = random(0,255);
         else b.brightness = bp2.brightness;
         
+        colorArray[colori] = int(b.brightness);
+        
         parent1 = parent1 + 2;
         if (parent1 >= boids.size()) parent1 = 0;
         bp1 = boids.get(parent1);
         parent2 = parent2 + 2;
         if (parent2 >= boids.size()) parent2 = 1;
         bp2 = boids.get(parent2);
+        colori += 1;
       }
       count = 0;
     }
@@ -324,4 +357,3 @@ class Flock {
   }
 
 }
-

@@ -70,11 +70,27 @@ body {
 	}
 	#content { 
 		margin: 50px auto 0px auto; padding: 25px 25px 15px 25px;
-		width: 640px; min-width: 300px; overflow: auto;
+		width: 90%; min-width: 300px; overflow: auto;
 		border-left: 1px solid #444; border-top: 1px solid #444; 
 		border-right: 1px solid #333; border-bottom: 1px solid #333;
 		background-color: #3d3d3d;
 	}
+
+.bar rect {
+  fill: steelblue;
+  shape-rendering: crispEdges;
+}
+
+.bar text {
+  fill: #fff;
+}
+
+.axis path, .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
 		</style>
 		<!--[if lt IE 9]>
 			<script type="text/javascript">alert("Your browser does not support the canvas tag.");</script>
@@ -107,42 +123,71 @@ body {
                         Built with <a href="http://processing.org" title="Processing">Processing</a>
                         and <a href="http://processingjs.org" title="Processing.js">Processing.js</a>
                         </p>
-                </div>
-
-<div class="chart"> </div>
-
 <script>
 var test = 30;
+
+var margin = {top: 10, right: 30, bottom: 30, left: 30},
+	width = 300 - margin.left - margin.right,
+	height = 150 - margin.top - margin.bottom;
+
+
+var svg = d3.select("body").append("svg")
+	.attr("width", width + margin.left + margin.right)
+	.attr("height", height + margin.top + margin.bottom)
+	.append("g")
+	.attr("transform", function(d) { return "translate(" + margin.left + "," + margin.top + ")"; });
+
+var sample = [4,10,5,10,1,1,1,1,1,20,1,1,1,1,1,1,1,1,1,1,1];
+
+
 function testFunc() {
+	
+	d3.select("body").selectAll(".bar").remove();
 
 	var pjs;
 	pjs = Processing.getInstanceById('boidsevolve');
 	var colorArray = pjs.val();
+	
+	var x = d3.scale.linear()
+	 .domain([0,256])  
+ 	 .range([0, width]);
 
 	var colorHist = d3.layout.histogram()
 		.bins(x.ticks(20))
-		(colorArray);
+		(sample);
 
-	d3.select(".chart")
-		.selectAll("div").remove();
+	sample = colorArray;
+	
+	var y = d3.scale.linear()
+	 .domain([0, d3.max(colorHist, function(d) { return d.y; })])
+	 .range([height, 0]);
 
-	var sample = [4,10,5,10,colorHist];
+	var bar = svg.selectAll(".bar")
+		.data(colorHist)
+		.enter().append("g")
+		.attr("class", "bar")
+		.attr("transform", function(d) { return "translate(" + x(d.x) + "," + y(d.y) + ")"; });
 
-	var x = d3.scale.linear()
-   	 .domain([0, d3.max(sample)])
-   	 .range([0, 420]);
+	bar.append("rect")
+		.attr("width", x(colorHist[0].dx) - 1)
+		.attr("height", function(d) { return height - y(d.y); } );
 
-	d3.select(".chart")
-	 .selectAll("div")
-	 .data(sample)
-  	 .enter().append("div")
-    	 .style("width", function(d) { return x(d) + "px"; })
-   	 .text(function(d) { return d; });
+//	d3.select(".chart")
+//	 .selectAll("div")
+//	 .data(colorArray)
+//	 .enter().append("div")
+//    	 .style("width", function(d) { return x(d) + "px"; })
+//   	 .text(function(d) { return d; });
 
 }
-setInterval(function () {testFunc();}, 500); 
+//button.on("click", function() { testFunc(); }); 
+// setInterval( function, 500);
 </script>
+</div>
 
+<div class="chart"> </div>
+
+<button onclick="testFunc()">click</button>
 
 
 </body>

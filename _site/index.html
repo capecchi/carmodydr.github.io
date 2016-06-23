@@ -26,25 +26,45 @@
 
     </head>
     <body>
-
 	<div class="container">
         <div class="site">
           <div class="header">
             <h1 class="title"><a href="/">Dan Carmody</a></h1>
             <a class="extra" href="/">home</a>
+	    <a class="extra" href="/about">about</a>
 	    <a class="extra" href="/blog">blog</a>
-	    <a class="extra" href="/research">research</a>
 	    <a class="extra" href="/projects">projects</a>
 	    <a class="extra" href="/photos">photos</a>
 	    <a class="extra" href="/links">links</a>
           </div>
 
-          <div id="home">
-<center>
+          <center>
+<div id="home">
 <a href="http://www.flickr.com/photos/carmodydr/sets/72157640553163783/"><img src="http://farm6.staticflickr.com/5533/12384544384_64a052da88.jpg"></a>
-</center>
+
+
+<div id="instafeed"></div>
+
+<script type="text/javascript" src="/src/instafeed.min.js"></script>
+
+
+
+
+
+<script type="text/javascript">
+        var feed = new Instafeed({
+                get: 'user',
+                userId: 15338817,
+                clientId: 'dc596a1850334680a63eabfa159ee4a9',
+                accessToken: '15338817.467ede5.afb4815ed3e4438ca1048d86fed46d54',
+                limit: 4 ,
+                template: '<a href="{{link}}"> <img src="{{image}}" alt="{{caption}}" /></a>'
+        });
+        feed.run();
+</script>
 
 </div>
+</center>
 
 
           <div class="footer">
@@ -62,6 +82,5 @@
           </div>
         </div>
 	</div><!-- container --> 
-
     </body>
 </html>
