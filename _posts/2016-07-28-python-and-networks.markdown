@@ -17,14 +17,6 @@ import json
 import seaborn as sns
 ```
 
-```python
-%pylab inline
-matplotlib.style.use('ggplot')
-```
-
-    Populating the interactive namespace from numpy and matplotlib
-
-
 # Graphs
 
 To help make some of these ideas more concrete, I'm playing around with the character graph data from Les Misérables. This has been wonderfully visualized by Mike Bostock [using D3](https://bl.ocks.org/mbostock/4062045). That link also provides the data in JSON format. There is also a GML version available [here](https://networkdata.ics.uci.edu/data.php?id=109). Ideally I should just be able to load this into networkx, but having run into trouble with that I'm instead using this as an opportunity to gain some experience with the pandas merge function.
