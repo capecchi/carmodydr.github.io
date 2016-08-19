@@ -32,9 +32,9 @@ disqus_shortname:   dan
 
 # Social
 # if you don't have any of social below, comment the line.
-#google:
+google:
   #plus:            #username
-  #analytics:
+  analytics:	    UA-50791294-1
   #verify:
   #ad-client:
   #ad-slot:
