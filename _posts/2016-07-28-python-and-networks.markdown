@@ -10,12 +10,12 @@ tags: python networks visualization
 
 I've put together a Jupyter notebook to help me sort out and understand various concepts concerning graphs and nd their implementation in Python. Sometime in the future I'll do the same for trees.
 
-```python
+{% highlight python %}
 import pandas as pd
 import networkx as nx
 import json
 import seaborn as sns
-```
+{% endhighlight %}
 
 # Graphs
 
@@ -25,7 +25,7 @@ First, I open the JSON file and store the edge and node information in separate 
 
 
 ```python
-mis_file = open('assets/data/miserables.json')
+mis_file = open('miserables.json')
 les_mis_json = json.load(mis_file)
 mis_links = pd.DataFrame(les_mis_json['links'])
 mis_nodes = pd.DataFrame(les_mis_json['nodes'])
@@ -69,7 +69,7 @@ nx.draw(le_graph)
 ```
 
 
-![png](assets/img/posts/output_13_0.png)
+![png](/assets/img/posts/output_13_0.png)
 
 
 The default graph drawing in networkx is not bad (in this specific case), but it's not particularly helpful, especially without labels. Although these can be included, the result is even less illuminating.
@@ -80,7 +80,7 @@ nx.draw_networkx(le_graph)
 ```
 
 
-![png](assets/img/posts/output_15_0.png)
+![png](/assets/img/posts/output_15_0.png)
 
 
 
@@ -97,7 +97,7 @@ Where `dot` is the graphviz command to produce a particular graph layout. Also a
 
 After this processing, we can visualize the graph using GraphViz:
 
-![mis_fdp](assets/img/posts/mis_fdp.png)
+![mis_fdp](/assets/img/posts/mis_fdp.png)
 
 This is much clearer!
 
@@ -166,7 +166,7 @@ ax[0].set_ylabel('Degree')
 
 
 
-![png](assets/img/posts/output_24_1.png)
+![png](/assets/img/posts/output_24_1.png)
 
 
 The outlier in the top right corner is Valjean, by far the most central character in the story. It's interesting to note, however, there are some measures of centrality that do not place Valjean at the top. Eigenvector centrality actually places him second to Gavroche, the intrepid little street urchin.
@@ -186,9 +186,9 @@ nx.write_graphml(dfs,'mis_dfs.graphml')
 ```
 
 The BFS tree is
-![mis_bfs](assets/img/posts/mis_bfs_fdp.png)
+![mis_bfs](/assets/img/posts/mis_bfs_fdp.png)
 
 The DFS tree is
-![mis_bfs](assets/img/posts/mis_dfs_dot.png)
+![mis_bfs](/assets/img/posts/mis_dfs_dot.png)
 
 There is plenty more to discuss concerning graphs, such as path search algorithms like Dijkstra and Bellman-Ford, and plenty more besides to say about trees. I suppose that'll just have to wait.

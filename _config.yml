@@ -14,8 +14,8 @@ url:                http://www.danielcarmody.net
 # Jekyll
 permalink:          /:title/
 markdown:           kramdown
-highlighter:        rouge
 kramdown:
+  syntax_highlighter: pygments
   auto_ids:         true
   footnote_nr:      1
   entity_output:    as_char

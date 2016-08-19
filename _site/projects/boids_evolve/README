@@ -1,1 +1,0 @@
-A collection of boids that exhibit evolving traits. The boids can be clicked on to be removed, and after a number of timesteps a new generation is formed with combinations of characteristics of the surviving members of the previous generation.
