@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A New Zealand Cycle Tour
-excerpt: A two week bike tour around the south island
+excerpt: A two week bike tour around the south island.
 tags: mapbox projects travel newzealand biking maps photos
 image: /projects/images/nz-preview.png
 project: true
