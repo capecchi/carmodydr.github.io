@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A New Zealand Cycle Tour
-excerpt: A collection of audio recordings from a variety of locations in the western United States.
+excerpt: A two week bike tour around the south island
 tags: mapbox projects travel newzealand biking maps photos
 image: /projects/images/nz-preview.png
 project: true
