@@ -10,6 +10,8 @@ project: true
 
 [![image](/projects/images/nz-preview.png)](/newzealand)
 
+[**jump to interactive map**](/newzealand)
+
 A couple of years ago my friend Jake, returning from a month at the south pole research station, was in New Zealand for a few weeks and looking for someone else to join him in some adventuring. I couldn't pass up such a wonderful opportunity, so I bought a plane ticket, researched some logistics (yes, in that order), and he and I spent almost two weeks bike touring around the south island.
 
 I took a bunch of photos while down there, both with my own Canon DSLR as well as a borrowed GoPro. For a while these photos sat in a [Flickr photo album][flickr], but I wanted to do something more with them, something that presented what we had done in an interactive web format. I love maps, and the wandering, geographic nature of this trip suggested that a map based navigation was the best way forward. I found a nice [blog post][hahn] by Young Hahn that used Mapbox to plot out a Sherlock Holmes story, and with a few tweaks I was able to use that format for the bike tour. My adapted code is up on [Github][github].
