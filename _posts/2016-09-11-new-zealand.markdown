@@ -10,7 +10,7 @@ project: true
 
 [![image](/projects/images/nz-preview.png)](/newzealand)
 
-[**jump to interactive map**](/newzealand)
+**click on image for interactive map**
 
 A couple of years ago my friend Jake, returning from a month at the south pole research station, was in New Zealand for a few weeks and looking for someone else to join him in some adventuring. I couldn't pass up such a wonderful opportunity, so I bought a plane ticket, researched some logistics (yes, in that order), and he and I spent almost two weeks bike touring around the south island.
 
