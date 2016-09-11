@@ -19,6 +19,9 @@
                         //Examples of how to assign the Colorbox event to elements
                         $(".sheffieldPix").colorbox({rel:'sheffieldPix', transition:"fade", maxWidth:"90%", maxHeight:"90%"});
                         $(".makaroraPix").colorbox({rel:'makaroraPix', transition:"fade", maxWidth:"90%", maxHeight:"90%"});
+                        $(".hokitikaPix").colorbox({rel:'hokitikaPix', transition:"fade", maxWidth:"90%", maxHeight:"90%"});
+                        $(".brucePix").colorbox({rel:'brucePix', transition:"fade", maxWidth:"90%", maxHeight:"90%"});
+                        $(".wanakaPix").colorbox({rel:'wanakaPix', transition:"fade", maxWidth:"90%", maxHeight:"90%"});
                                 
                 });
         </script>
@@ -179,7 +182,9 @@ body.section-0 #map { opacity:0.5; }
 <article>
   <section id='cover' class='cover active'>
     <h1>A <br> New Zealand <br> Cycle Tour</h1>
-    <p></p>
+    <p>January 2014</p>
+    <p><a href="http://www.danielcarmody.net">Dan Carmody</a></p>
+    <p>full photo album available on <a href="https://www.flickr.com/photos/carmodydr/albums/72157640553163783">Flickr</a></p>
     <small class='scroll'>Scroll ▼</small>
   </section>
   <section id='christchurch'>
@@ -196,7 +201,7 @@ body.section-0 #map { opacity:0.5; }
   </section>
   <section id='hokitika'>
     <h2>Hokitika</h2>
-    <p>With a population of about 3000 people, Hokitika was the biggest place we would pass through, other than Christchurch. It is home to many greenstone (jade) artisans and a fair share of restaurants and bakeries.</p>
+    <p>With a population of about 3000 people, <a class="hokitikaPix" href="https://farm4.staticflickr.com/3734/12384687613_531dbb3b2f_z_d.jpg" title="Hokitika artwork">Hokitika</a> was the biggest place we would pass through, other than Christchurch. It is home to many greenstone (jade) artisans and a fair share of restaurants and bakeries.</p>
   </section>
   <section id='ross'>
     <h2>Ross</h2>
@@ -208,7 +213,7 @@ body.section-0 #map { opacity:0.5; }
   </section>
   <section id='brucesbay'>
     <h2>Bruce's Bay</h2>
-    <p>We found a spot to camp on the beach amid a huge collection of driftwood. While we were cooking dinner a campervan parked nearby and a family disembarked. Two little kids, ages 8 and 10, came over and told us that their dad was making a bonfire, and that we were invited. We joined them and were greeted with marshmallows to toast and a couple of beers.</p>
+    <p>We found a spot to camp on <a class="brucePix" href="https://farm8.staticflickr.com/7369/12330054625_d68f0e606d_z_d.jpg" title="Camping on the beach">the beach</a> amid a huge collection of driftwood. While we were cooking dinner a campervan parked nearby and a family disembarked. Two little kids, ages 8 and 10, came over and told us that their dad was making a <a class="brucePix" href="https://farm3.staticflickr.com/2885/12385308554_2236ae775d_z_d.jpg" title="Bonfire on the beach">bonfire</a>, and that we were invited. We joined them and were greeted with marshmallows to toast and a couple of beers.</p>
   </section>
   <section id='haast'>
     <h2>Haast</h2>
@@ -216,11 +221,11 @@ body.section-0 #map { opacity:0.5; }
   </section>
   <section id='makarora'>
     <h2>Makarora</h2>
-    <p>There was a campground in Makarora, and not much else. We were lucky enough to have a clear sky at night for stargazing.</p>
+    <p>There was a campground in Makarora, and <a class="makaroraPix" href="https://farm3.staticflickr.com/2844/12385398615_172e75b54c_z_d.jpg" title="Empty Makarora road">not much else</a>. We were lucky enough to have a clear sky at night for stargazing.</p>
   </section>
   <section id='wanaka'>
     <h2>Wanaka</h2>
-    <p>Wanaka was warm and sunny, and the final point of our bike tour. From Wanaka we caught a bus back to Christchurch.</p>
+    <p>Wanaka was warm and sunny, and the final point of our bike tour. From Wanaka we caught a bus back to Christchurch, passing by the <a class="wanakaPix" href="https://farm8.staticflickr.com/7321/12386188304_2f41d6c1b5_k_d.jpg" title="Lake Pukaki and Mount Cook/Aoraki">teal waters of Lake Pukaki and the distant, frosty form of Aoraki</a>.</p>
   </section>
 <section id='finish'>
     <h2>The End</h2>
@@ -259,7 +264,7 @@ var geojson = [
     "properties": { "id": "makarora" } },
   { "geometry": { "type": "Point", "coordinates": [170.816975,-42.899578] },
     "properties": { "id": "ross" } },
-//  {"geometry":{"coordinates":[169.04422760009766,-43.86077227578091],"type":"Point"},"properties":{"description":"We stayed at a backpacker here.","id":"marker-hrxrvafu0","marker-color":"#1087bf","marker-size":"medium","marker-symbol":"","title":"Haast"},"type":"Feature"}
+  {"geometry":{"coordinates":[169.04422760009766,-43.86077227578091],"type":"Point"},"properties":{"description":"We stayed at a backpacker here.","id":"marker-hrxrvafu0","marker-color":"#1087bf","marker-size":"medium","marker-symbol":"","title":"Haast"}}
 ];
 //mapbox.markers.layer.loadURL('cities.geojson');
 
