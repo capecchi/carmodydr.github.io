@@ -10,6 +10,8 @@ Back in January of 2014 I took a trip out to the South Island of New Zealand to 
 
 {% include image.html url="https://farm8.staticflickr.com/7294/12384549513_9643830484_z_d.jpg" description="Myself, standing with rented bike along the West Coast." %}
 
+---
+
 
 There is something strangely alluring about New Zealand. Nestled in the southern-most reaches of the globe, it is distant and sparsely populated, offering empty places and stunning views. Populated by human beings only since the 13th century, there is a fresh kind of wildness to it. The first Europeans to settle the land arrived in the early 19th century. In the 1874 book 'Crusts: A Settler's Fare Due South', Laurence Kennaway declared about landing on the South Island, "That man must have a strong, cold heart, who in stepping from a ship's boat into a really new country, does not feel bewildered, and something desolate." But, for an American, that bewilderment and desolation is offset by the safety and security of its English speaking and largely western culture. The result is something both exotic and familiar. 
 
