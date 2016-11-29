@@ -3,7 +3,6 @@ layout: post
 title: Two Weeks and Two Wheels on the South Island
 excerpt: A two week bike tour around the south island.
 tags: writing travel newzealand biking photos
-image: /projects/images/nz-preview.png
 ---
 
 
