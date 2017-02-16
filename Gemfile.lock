@@ -8,7 +8,12 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     addressable (2.4.0)
+    coffee-script (2.4.1)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.11.1)
     colorator (1.1.0)
+    execjs (2.7.0)
     faraday (0.9.2)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.14)
@@ -27,6 +32,9 @@ GEM
       pathutil (~> 0.9)
       rouge (~> 1.7)
       safe_yaml (~> 1.0)
+    jekyll-coffeescript (1.0.2)
+      coffee-script (~> 2.2)
+      coffee-script-source (~> 1.11.1)
     jekyll-feed (0.7.0)
     jekyll-gist (1.4.0)
       octokit (~> 4.2)
@@ -76,6 +84,7 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (~> 3.0)
+  jekyll-coffeescript
   jekyll-feed
   jekyll-gist
   jekyll-mentions
