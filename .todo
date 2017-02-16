@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<todo version="0.1.20">
+    <note priority="veryhigh" time="1474586005">
+        whitney feature
+        <note priority="veryhigh" time="1474586045">
+            edit text, make it slim, readable, not sentimental
+        </note>
+        <note priority="high" time="1474586019">
+            finish editing photos
+        </note>
+        <note priority="high" time="1474586077">
+            shift style from notebook to markdown, make sure map is embedded well
+        </note>
+    </note>
+    <note priority="veryhigh" time="1478534342">
+        Add a post describing the functionality and algorithms behind Concertrip
+    </note>
+    <note priority="high" time="1474561753">
+        breakdown of data storytelling
+        <note priority="high" time="1474561768">
+            find some good examples
+        </note>
+    </note>
+    <note priority="high" time="1474586099">
+        simple posts using tools
+        <note priority="high" time="1474586126">
+            d3 examples, with simple data
+        </note>
+        <note priority="medium" time="1474586146">
+            sunlight API
+        </note>
+        <note priority="low" time="1474586175">
+            grab a data set, explore it in notebook, output results in clean format
+        </note>
+        <note priority="low" time="1474586845">
+            use timeline from knightlab embedded in a post, maybe fusion history?
+        </note>
+    </note>
+    <note priority="medium" time="1474561731">
+        add list of good data sets
+    </note>
+</todo>
