@@ -5,6 +5,10 @@ excerpt:
 tags:
 ---
 
+Link for my map:
+
+What are the important points? Map of impact structures. Earth is a celestial object. Vist and explore!
+
 making fixed circles: http://gis.stackexchange.com/questions/81520/i-want-to-add-a-circle-which-stays-the-same-size
 
 
@@ -26,7 +30,9 @@ Impact Calculator: http://simulator.down2earth.eu/planet.html?lang=en-US
 
 Impact Earth: http://www.purdue.edu/impactearth/
 
-EID:
+*explain the data sources*
+
+**EID**:
 http://www.impact-structures.com/database-of-earth-impact-structures/
 http://www.somerikko.net/impacts/database.php (best for scraping data)
 http://tsun.sscc.ru/nh/impact.php
