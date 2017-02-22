@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Fundamentals of storytelling (with data).
-excerpt: Identifying the basic elements of good storytelling.
-tags: writing data stories communication
+title: Ascent of Mt. Whitney
+excerpt: An early spring ascent of Mt. Whitney.
+tags: mountains hiking camping
 ---
 
 Write a retrospective, with images. And maybe some visualization of the route.
