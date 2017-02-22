@@ -24,7 +24,7 @@ flickr: https://www.flickr.com/photos/carmodydr/albums/72157652642529045
 
 ![figure](https://farm9.staticflickr.com/8889/17499240576_223d8d5188_z_d.jpg)
 
-![figure](/assets/img/whitney/kyle_close.jpg)
+![figure](/assets/img/whitney/WMT_Seg1.png)
 
 A few years ago I had the opportunity to join a few others in an excursion to the peak of Mt. Whitney, the highest mountain in the lower 48 states.
 
@@ -46,6 +46,8 @@ We had our gear collected on the tables in the dining area and a few grocery bag
 
 We arrived in Lone Pine as the sun was setting, but we needed to drive out to Whitney Portal, 15 miles and 5000 feet up in the mountains. Cell service was poor up there, and so we had only been receiving sporadic text message updates from Ben, who was somewhere up there trying to find us a campsite for the night. Driving that way took us past the Alabama Hills, huge fields of large red boulders, and eventually up the winding mountain road. Darkness had fallen by this time, and our surroundings were mostly obscured by the night, but it was apparent that large monolithic walls had surrounded us on our drive to the campgrounds. At the entrance to one of the campgrounds we found Ben parked with his headlights on. There were a few open campsites, so we grabbed one and settled in for the night.
 
+![figure](/assets/img/whitney/kyle_close.jpg)
+
 ## Day 1
 
 The trail from Whitney Portal to the summit climbs about 6000 feet over the course of about 11 miles. Completing the trip in a day, 22 miles round trip, requires good fitness, an early start, and perfect conditions. For those not so daring, there are two camps along the way to split the journey. Outpost Camp, at 10000 feet elevation and 3.5 miles from the trailhead, and Trail Camp, 6.5 miles in and at 12000 feet. Our plan was to make our way to Trail Camp on day one and push for the summit the following day.
@@ -61,6 +63,7 @@ Every group of people we met along the way told us that they had turned back bef
 ![figure](/assets/img/whitney/tent.jpg)
 
 ![figure](/assets/img/whitney/beer_tents.jpg)
+
 ![figure](/assets/img/whitney/ben_mountains.jpg)
 
 ## Day 2
@@ -69,6 +72,7 @@ Morning arrived with a 5:30 AM alarm, but the anticipation of the cold and dark 
 
 
 ![figure](/assets/img/whitney/east_facing.jpg)
+
 ![figure](/assets/img/whitney/paul_silhouette.jpg)
 
 The mountain was waiting, however, and time would not, so as the sky brightened with the coming dawn we arrived at the inevitable. The deliberate decision to remove oneself from the warm and comfortable embrace of a bed and step out into the cold, dark pre-dawn morning is one of the most difficult aspects of a trip like this one, as predictable as it is unavoidable. I stomped around in my boots as we heated water for breakfast, struggling to maintain feeling in my toes, and then to regain it. Slowly the sun began to creep up over the mountains to the east, bringing with it a feeling of vitality, if not yet of warmth.
