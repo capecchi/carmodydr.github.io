@@ -21,8 +21,26 @@ Flask is a micro-framework written in Python. Simpler and more lightweight than 
 - views
 - templates
 
-    sample view code
 
+A view allows you to determine what happens when a user visits a particular url, potentially collecting information and chucking into some Python code before rendering it in a template.
+
+
+```
+    def multiply
+
+    @app.route('/')
+    @app.route('/index')
+    def roadtrip_input():
+        foo = request.args.get('user_entered_variable')
+        bar = multiplyIt(foo, 10)
+        return render_template("index.html", var1 = foo, var2 = bar )
+```
+
+Variables passed within `render_template` can be accessed using Jinga bracket notation. These brackets can be used anywhere in the template, including the HTML tags and JavaScript code (as I'll demonstrate later).
+
+```
+    <p>You've passed the variable {{ foo }}, but we multiplied it and now it's {{ var2 }}!</p>
+```
 
 ## Data collection
 
@@ -32,19 +50,11 @@ I'll talk more about the actual algorithm below, but one of the elements that it
 
 BeautifulSoup seems to be the defacto standard for web-scraping in Python. It has simple syntax, is straightforward to use, and is quite effective.
 
-    example
+    EXAMPLE OF BS4
 
 The urls at LastFM are constructed like `www.lastfm.com/ARTIST_NAME`, so in order to automate the web-scraping I needed a large set of musician/band names to iterate through. This list I grabbed from Billboard.com. Once I had that, I ran through it to pull the first page of similar artists from every musicians homepage. This gets stored as pairwise relationships in a MySQL database.
 
-Being all about live concerts, Concertrip also needs to know what events are happening! Enter Bandsintown.com, which has an API that allows event information to be pulled given a range of dates, a geographic location, and a search radius.
-
-
-Events
-- bandsintown API
-- 
-- front end
-
-    API call
+Being all about live concerts, Concertrip also needs to know what events are happening! For this I turned to Bandsintown.com, which has an API that allows event information to be pulled given a range of dates, a geographic location, and a search radius.
 
 ## Algorithm
 
@@ -56,21 +66,48 @@ The algorithm is the most interesting part of the site, from my perspective, and
 - finding shortest path
 - edge weighting
 
+IMAGES
+
 
 ## Displaying results
 
-As fancy as everything might be on the back-end, results are worthless if they aren't understood! For something with such important geographic information as a roadtrip, the most intuitive way to understand the website's output is with a map. [I love maps]()! I love maps so much that I had already spent time prior to this project playing around with JavaScript and Mapbox. This allowed me to adapt what I knew and implement some basic mapping relatively quickly (and within the project's deadlines).
+As fancy as everything might be on the back-end, results are worthless if they aren't understood! For something with such important geographic information as a roadtrip, the most intuitive way to understand the website's output is with a map. [I love maps!](http://www.danielcarmody.net/projects) I love maps so much that I had already spent time prior to this project playing around with JavaScript and Mapbox. This allowed me to adapt what I knew and implement some basic mapping relatively quickly (and within the project's deadlines).
 
-The trickiest part was learning how to pass an array of locations through  Flask into the JavaScript template.
+The trickiest part was learning how to pass an array of locations through  Flask into the JavaScript template. The event information is created as a number of different arrays in Python and then passed to the map template.
 
-- json
-- leaflet
-- pop-ups
+
+```
+    return render_template("map.html", placesList = placesList, eventList = topEvents, startName = start, endName = end)
+```
+
+These arrays are iterated over to place Leaflet markers on the map and populate the pop-up tooltips.
+
+
+```
+	for (i=0; i < {{ placesList }}.length; i++) { 
+		var locLat =  {{placesList}}[i][0];
+		var locLon =  {{placesList}}[i][1];
+		var tooltip = '<h1>'.concat('Band: ',bandArr[i],'<\/h1><h2>Venue: ',
+			venArr[i],'<\/h2><h3>',dateArr[i],'</h3>');
+		if (bandArr[i] == 'Start') {
+			tooltip = 'Start'; }
+		if (bandArr[i] == 'End') {
+			tooltip = 'End'; }
+		var color = "#3ca0d3"; // blue, color for unchosen event
+		if (colorArr[i] == 1) { color = '#ff3333'; }
+		L.marker( [locLat,locLon], {title: String(bandArr[i]),
+				icon: L.mapbox.marker.icon({
+    				    'marker-size': 'large',
+    				    'marker-symbol': 'music',
+    				    'marker-color': color })
+			 } ).addTo(mapLeaflet).bindPopup( tooltip );
+	}
+```
+
+It might be a bit janky, but it works!
 
 # Conclusion
 
 The site still has issues, the primary problem being that it is just far too slow. There are two reasons for this, both related to the underlying algorithm. The first reason has to do with the algorithm itself. Finding the shortest path is not a fast process, and doing this for all the events being pulled expounds this problem. Secondly, API calls are not fast either, and the number of calls being made also contributes to the lag in returning results to the user.
 
 As a whole, this site is more interesting and novel than functional. It never seemed worthwhile to fix it up more completely, so I've moved on to other things. It's greatest use was for me to learn all the various pieces that made it possible.
-
-[hyptertext]: link
