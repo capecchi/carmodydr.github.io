@@ -6,7 +6,28 @@ date: 02-28-2017
 tags: insight data-science data concertrip web
 ---
 
+![figure](/assets/img/concertrip/concertripLogo.png)
+
 # Summary
+
+
+![figure](/assets/img/concertrip/InitialGraph.png)
+
+![figure](/assets/img/concertrip/tinyGraph.png)
+
+
+![figure](/assets/img/concertrip/routeMapGridpng.png)
+
+![figure](/assets/img/concertrip/routeMapGridEvents.png)
+
+![figure](/assets/img/concertrip/routeMapGridEventsTop.png)
+
+
+
+![figure](/assets/img/concertrip/routeMapGridEventsTopOnly.png)
+
+![figure](/assets/img/concertrip/map_output.png)
+
 
 Concertrip.me was the site I built as a Data Science fellow with the Insight program. It takes user-entered information about an upcoming roadtrip, combines it with musician and concert data, and outputs a suggested roadtrip itinerary that attempts to see as many relevant live music events as possible. It was built up over the course of about four weeks using a number of technologies, including Flask, MySql, and Mapbox.
 
