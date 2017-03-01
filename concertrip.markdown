@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Concertrip: Compose your perfect road trip.
+title: "Concertrip: Compose your perfect road trip."
 excerpt: Providing personalized musical roadtrips using data.
-date:
+date: 02-28-2017
 tags: insight data-science data concertrip web
 ---
 
@@ -18,21 +18,18 @@ My goal for this site was a simple set of pages where users could enter some det
 
 Flask is a micro-framework written in Python. Simpler and more lightweight than Django, it provides the means by which actions and visualization on the front-end are tied to code and data on the backend. This is accomplished through **views** and **templates**.
 
-- views
-- templates
-
-
 A view allows you to determine what happens when a user visits a particular url, potentially collecting information and chucking into some Python code before rendering it in a template.
 
 
 ```
-    def multiply
+    def multiplyItByTen(number):
+        return number*10
 
     @app.route('/')
     @app.route('/index')
     def roadtrip_input():
         foo = request.args.get('user_entered_variable')
-        bar = multiplyIt(foo, 10)
+        bar = multiplyIt(foo)
         return render_template("index.html", var1 = foo, var2 = bar )
 ```
 
@@ -52,7 +49,7 @@ BeautifulSoup seems to be the defacto standard for web-scraping in Python. It ha
 
     EXAMPLE OF BS4
 
-The urls at LastFM are constructed like `www.lastfm.com/ARTIST_NAME`, so in order to automate the web-scraping I needed a large set of musician/band names to iterate through. This list I grabbed from Billboard.com. Once I had that, I ran through it to pull the first page of similar artists from every musicians homepage. This gets stored as pairwise relationships in a MySQL database.
+The urls at LastFM are constructed like `www.lastfm.com/ARTIST_NAME`, so in order to automate the web-scraping I needed a large set of musician/band names to iterate through. This list I grabbed from Billboard.com. Once I had that, I ran through it to pull the first page of similar artists from every musician's homepage. This gets stored as pairwise relationships in a MySQL database.
 
 Being all about live concerts, Concertrip also needs to know what events are happening! For this I turned to Bandsintown.com, which has an API that allows event information to be pulled given a range of dates, a geographic location, and a search radius.
 
@@ -60,11 +57,28 @@ Being all about live concerts, Concertrip also needs to know what events are hap
 
 The algorithm is the most interesting part of the site, from my perspective, and the heart of its functionality. It is all based in network analysis and relies on the NetworkX Python library.
 
-- artist similarity metric
+### Artist similarity metric
 
-- selecting top event
-- finding shortest path
-- edge weighting
+In order to know what events best match the musical preferences of the user I needed some way to assess the 'goodness' of a band or musician. I decided to do this by asking the user for the name of an artist they like and then evaluating the similarity between that artist and those that are playing live concerts.
+
+Initially I was thinking of using the Spotify API to calculate distance in a high-dimensional feature space, but the API only has information for songs, not artists, and I decided that putting together something effective would take more time than I had.
+
+As I mentioned above, I outsourced the problem and scraped data from LastFM, generating a large list (~80,000 entries) of pairwise relationships. Using this I constructed a *similarity network*, in which you can hop from artist to artist. The **similarity metric** I use is just the shortest path between two musicians in this network.
+
+### Route finding
+
+Judging "musical fit" is only one necessary ingredient - I also have to construct the roadtrip itself! There are a few steps to this algorithm.
+
+#### Form a search grid from start to end.
+
+#### Pull events in each grid location, rank them using the similarity metric, keep only the top one.
+
+#### Construct a network of these top ranking events.
+
+directed graph, forward in time, not too far
+
+#### Weight edges based on distance and similarity and find the shortest path.
+
 
 IMAGES
 
@@ -84,7 +98,7 @@ These arrays are iterated over to place Leaflet markers on the map and populate 
 
 
 ```
-	for (i=0; i < {{ placesList }}.length; i++) { 
+	for (i=0; i < {{ placesList }}.length; i++) {
 		var locLat =  {{placesList}}[i][0];
 		var locLon =  {{placesList}}[i][1];
 		var tooltip = '<h1>'.concat('Band: ',bandArr[i],'<\/h1><h2>Venue: ',
