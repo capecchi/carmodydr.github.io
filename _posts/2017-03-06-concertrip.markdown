@@ -68,7 +68,7 @@ It's much clearer if I focus on just two musicians and the path between them. Fo
 
 ![figure](/assets/img/concertrip/tinyGraph.png)
 
-An interesting feature of the shortest path approach is that each step is a style transition, and the entity right in the middle is often a curious blend of the two on the ends. In this instance, for example, we find Jonny Greenwood lead guitarist for Radiohead who sometimes [plays electric guitar with orchestras](https://www.youtube.com/watch?v=tSipfGtbf20).
+An interesting feature of the shortest path approach is that each step is a style transition, and the entity right in the middle is often a curious blend of the two on the ends. In this instance, for example, we find Jonny Greenwood, lead guitarist for Radiohead who sometimes [plays electric guitar with orchestras](https://www.youtube.com/watch?v=tSipfGtbf20).
 
 ### Route finding
 
