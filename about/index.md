@@ -6,7 +6,7 @@ date: 2016-07-21
 comments: false
 ---
 
-I am currently a Fellow in the Insight Data Science program. Prior to this I was a physicist and science teacher. I completed my PhD at the University of Wisconsin - Madison in December 2014, and afterwards I was an instructor at Astrocamp in Idyllwild, CA. 
+I am currently a Data Engineer with [Impact Health](www.impacthealth.io). Prior to this I was a Fellow in the Insight Data Science program, and before that I was a physicist and science teacher. I completed my PhD at the University of Wisconsin - Madison in December 2014, and afterwards I was an instructor at Astrocamp in Idyllwild, CA. 
 
 My curriculum vitae can be downloaded <a href="carmody_cv.pdf">here</a>. An html version can be seen <a href="cv.html">here</a>. 
 
