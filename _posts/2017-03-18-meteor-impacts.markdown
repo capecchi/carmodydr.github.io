@@ -3,7 +3,7 @@ layout: post
 title: All known meteor impacts on Earth
 excerpt: A map of impact structures on planet Earth
 tags: space maps meteors carto
-date: 18-03-2017
+date: 2017-03-18
 ---
 
 ![figure](/assets/img/meteors/crater-grid.png)
