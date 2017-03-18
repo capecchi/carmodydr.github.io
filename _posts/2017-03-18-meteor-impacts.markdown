@@ -16,7 +16,7 @@ Earth, of course, **is** a celestial body, just like the moon, and there is evid
 
 This map shows [**impact structures**](http://www.impact-structures.com/) here on Earth. Impact structures are craters or the remnants of craters left by a meteor impact, and they show evidence of the constant bombardment our planet is under. The red dots show the location of an impact structure, while the orange circles show the estimated radius.
 
-Since some of these impacts occured millions of years ago not all have visible craters. Instead, evidence of an impact is often built based on geological evidence like anomalous amounts of fused glass and shocked minerals.
+Since some of these impacts occurred millions of years ago not all have visible craters. Instead, evidence of an impact is often built based on geological evidence like anomalous amounts of fused glass and shocked minerals.
 
 As I made this map I poked around at a few structures. Here are some of my favorites:
 
@@ -31,7 +31,7 @@ As I made this map I poked around at a few structures. Here are some of my favor
 
 There are others, as well. Check out someone else's [list of favorites](http://www.wondermondo.com/Best/World/ImpressiveImpactCraters.htm). (These are the ones that make up the collaged picture above.)
 
-A lot of factors go into determining just how big of a crater any given meteor might make. There are a few online simulators that allow you to repeatedly smash spack rocks into out planet: [ImpactEarth](http://www.purdue.edu/impactearth/) and the [Impact Calculator](http://simulator.down2earth.eu/planet.html).
+A lot of factors go into determining just how big of a crater any given meteor might make. There are a few online simulators that allow you to repeatedly smash space rocks into out planet: [ImpactEarth](http://www.purdue.edu/impactearth/) and the [Impact Calculator](http://simulator.down2earth.eu/planet.html).
 
 The Earth is an interesting place for many, many reasons. It is socially diverse and geologically complex, and there is admittedly much that requires our attention. Nevertheless, reminding ourselves that Earth itself is part of a larger context can bring an illuminating shift in perspective. These craters are everywhere. Visit and explore!
 
